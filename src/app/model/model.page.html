@@ -1,0 +1,75 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-title slot="start">Vote</ion-title>
+      <ion-button slot="end" (click)="viewstat()" shape="round" color="danger">{{statM}}</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="poll" style="padding: 10px;">
+  <!-- <ion-tap>{{demoText}}</ion-tap> -->
+  <ion-item (click)="addOptiontoFirebase(poll.option1)" style="border: 1px solid #eb445a;border-radius: 10px;margin-top:2vh;">
+    <!-- <ion-label position="stacked">Title</ion-label><br> -->
+    <ion-input  [readonly]="true" [(ngModel)]="poll.option1" rows="10" ></ion-input>
+    <div *ngIf="stat" style="margin-left: 3vh;">
+      <ion-item lines="none" >
+        <ion-label slot="end" color="medium" style="font-size: small;">{{opt1Total}}/50</ion-label>
+        <ion-input [readonly]="true" >
+          <ion-progress-bar color="danger" [value]="loadProgress1" style="height: 10px;border-radius: 10px;"></ion-progress-bar>
+        </ion-input>
+      </ion-item>
+    </div>
+  </ion-item>
+
+  <ion-item (click)="addOptiontoFirebase(poll.option2)" style="border: 1px solid #eb445a;border-radius: 10px;margin-top:2vh;">
+    <!-- <ion-label position="stacked">Title</ion-label><br> -->
+    <ion-input  [readonly]="true" [(ngModel)]="poll.option2" rows="10" ></ion-input>
+    <div *ngIf="stat" style="margin-left: 3vh;">
+      <ion-item lines="none" >
+        <ion-label slot="end" color="medium" style="font-size: small;">{{opt2Total}}/50</ion-label>
+        <ion-input [readonly]="true" >
+          <ion-progress-bar color="danger" [value]="loadProgress2" style="height: 10px;border-radius: 10px;"></ion-progress-bar>
+        </ion-input>
+      </ion-item>
+    </div>
+  </ion-item>
+  <!-- *ngIf="option3" -->
+  <ion-item *ngIf="option3Checker"  (click)="addOptiontoFirebase(poll.option3)"  style="border: 1px solid #eb445a;border-radius: 10px;margin-top:2vh;">
+    <!-- <ion-label position="stacked">Title</ion-label><br> -->
+    <ion-input  [readonly]="true" [(ngModel)]="poll.option3" rows="10" ></ion-input>
+    <div *ngIf="stat" style="margin-left: 3vh;">
+      <ion-item lines="none" >
+        <ion-label slot="end" color="medium" style="font-size: small;">{{opt3Total}}/50</ion-label>
+        <ion-input [readonly]="true" >
+          <ion-progress-bar color="danger" [value]="loadProgress3" style="height: 10px;border-radius: 10px;"></ion-progress-bar>
+        </ion-input>
+      </ion-item>
+    </div>
+  </ion-item>
+
+</div>
+</ion-content>
+
+<!-- <ion-item lines="none"  style="border: 1px solid #eb445a;border-radius: 10px; margin-top: 10px;">
+
+  <ion-input  slot="start" [readonly]="true" [(ngModel)]="poll.option2"  ></ion-input>
+  ion-label slot="end" color="medium" style="font-size: small;">15 votes</ion-label>
+  <ion-progress-bar color="danger" [value]="loadProgress" style="height: 10px;border-radius: 10px;"></ion-progress-bar>
+</ion-item>
+
+<ion-item *ngIf="option3" style="border: 1px solid #eb445a;border-radius: 10px;margin-top: 10px;">
+
+  <ion-input  [readonly]="true" [(ngModel)]="option3" rows="10" ></ion-input>
+</ion-item>
+
+<ion-item *ngIf="option4" style="border: 1px solid #eb445a;border-radius: 10px;margin-top: 10px;">
+
+  <ion-input  [readonly]="true" [(ngModel)]="option4" rows="10" ></ion-input>
+</ion-item>
+
+<ion-item *ngIf="option5" style="border: 1px solid #eb445a;border-radius: 10px;margin-top: 10px;">
+
+  <ion-input  [readonly]="true" [(ngModel)]="option5" rows="10" ></ion-input>
+</ion-item> -->

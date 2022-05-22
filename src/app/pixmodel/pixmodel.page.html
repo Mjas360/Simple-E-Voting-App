@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title><h3 style="font-weight: bold;">Profile Photo</h3></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding-top" >
+    <ion-row>
+      <ion-col size="3" class="ion-text-center" (click)="deleteFunction()">
+        <div class="removePhoto">
+          <ion-icon name="trash" class="icon" size="large"></ion-icon>
+        </div>
+        <p>
+          Remove <br> photo
+        </p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center"
+        (click)="takePicture('Photos')">
+       <div class="galleryPhoto">
+          <ion-icon name="images" class="icon" size="large" ></ion-icon>
+       </div>
+       <p>
+         Gallery
+       </p>
+     </ion-col>
+     <ion-col size="3" class="ion-text-center"   (click)="takePicture('Camera')">
+       <div class="cameraPhoto">
+         <ion-icon name="camera" class="icon" size="large" ></ion-icon>
+       </div>
+       <p>
+         Camera
+       </p>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

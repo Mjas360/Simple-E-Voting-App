@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/folder/Inbox" routerDirection = "back" slot="start" shape="round" style="--box-shadow:none; --background: none">
+        <ion-icon  name="arrow-back-outline" color="danger" style="margin-left: -10%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div style="height: 20vh; display: grid; text-align: center;">
+      <ion-avatar class="image-center" style="border: 3px solid rgb(245, 128, 81);">
+        <img [src]="img">
+      </ion-avatar>
+      <div>~Admin: {{email}}</div>
+      <div>{{NoPoll}} polls Available</div>
+    </div>
+
+  <ion-card color="danger"  style="height: auto;">
+    <!-- style="height: 27vh;" -->
+    <ion-item color="danger" button lines="none">
+      <ion-label slot="start">
+        <h1>Polls</h1>
+      </ion-label>
+      <ion-button slot="end" shape="round" expand="full" color="light" routerLink="/chat-room" routerDirection = "forward">add
+        <ion-icon name="add-circle-outline" slot="end" button></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card color="danger" style="margin-top: 3vh;" style="height: auto;">
+    <ion-item color="danger" lines="none">
+      <ion-label slot="start">
+        <h1>Topics</h1>
+      </ion-label>
+      <ion-button slot="end" shape="round" expand="full" color="light" (click)="openTopic()">
+        View<ion-icon name="eye-outline" slot="end" button></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger" (click)="addAdmin()">
+    <ion-fab-button color="danger">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

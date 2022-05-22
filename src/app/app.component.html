@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-split-pane contentId="main-content" >
+    <ion-menu contentId="main-content" type="overlay" >
+      <ion-content>
+        <ion-list id="inbox-list" style="background-color:  white">
+          <!-- <ion-list-header style="color: black;text-align: center;">
+          </ion-list-header> -->
+
+          <ion-item style="--background: none;" lines="none" >
+            <ion-label color="dark" style="font-size: x-large; font-weight: bold;">Menu </ion-label>
+            <!-- <ion-label color="dark" style="font-size: x-large; ">Folarine John </ion-label> -->
+            <!-- <ion-label color="light" >  <ion-icon name="star-outline" color="light"></ion-icon>3.0</ion-label> -->
+          </ion-item>
+          <hr style="background-color: rgb(224, 223, 223);">
+          <!-- <ion-note style="color: white;">hi@ionicframework.com</ion-note> -->
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index" >
+            <ion-item style="--background: white" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected" >
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'" color="success"></ion-icon>
+              <ion-icon slot="end" name="chevron-forward-outline" style="color: gray;"></ion-icon>
+              <ion-label style="color: black;">{{ p.title }}</ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+        </ion-list>
+
+        <!-- <ion-list id="labels-list" style="background-color: #1C6155">
+          <ion-list-header >Labels</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none" style="--background:#1C6155;">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label style="color: white;">{{ label }}</ion-label>
+          </ion-item>
+        </ion-list> -->
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

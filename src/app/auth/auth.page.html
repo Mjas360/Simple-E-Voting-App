@@ -1,0 +1,85 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <!-- App name -->
+    </ion-title>
+    <!-- <ion-button routerLink="/folder/Inbox" routerDirection = "back" slot="start" shape="round" style="--box-shadow:none; --background: none">
+      <ion-icon  name="arrow-back-outline" color="success" style="margin-left: -10%;"></ion-icon>
+    </ion-button> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides  (ionSlideWillChange)="segment=''+slides.getActiveIndex()">
+    <ion-slide class="slide1" style="display: grid;">
+      <h2 style="display: grid;"><span style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Welcome to</span> <ion-label style="font-weight:bold">Fuw Poll</ion-label></h2>
+      <ion-list style="margin-top: 40%;">
+        <ion-item button (click)="goToNextSlide()">
+          <ion-icon  name="person-add-outline" color="success" slot="start"></ion-icon>
+          <ion-label style="display: grid;">Add Account <ion-note style="font-size: 10px;">I want to create a new AppName account</ion-note></ion-label>
+          <ion-icon  name="chevron-forward" color="medium" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item button style="margin-top: 5%;" (click)="goToLaSlide()">
+          <ion-icon  name="lock-open-outline" color="success" slot="start"></ion-icon>
+          <ion-label style="display: grid;">Login Account <ion-note style="font-size: 10px;">I already have an account</ion-note></ion-label>
+          <ion-icon  name="chevron-forward" color="medium" slot="end"></ion-icon>
+        </ion-item>
+      </ion-list>
+
+      <ion-label style="font-size: 13px;padding: 2%; margin-top: 60%;">
+        By creating an account, you agree to AppName's <ion-label color="success">Terms and Conditions</ion-label> and <ion-label color="success">Privacy Policy</ion-label>
+      </ion-label>
+
+
+    </ion-slide>
+    <!-- signup slide -->
+    <ion-slide style="display: grid;">
+      <h4>Create An Account</h4>
+      <diV style="display: inline-block;text-align: left;padding-left: 5%;padding-right: 5%;">
+        <ion-list style="margin-top: 5%;">
+          <!-- <ion-item>
+            <ion-icon  slot="start" name="person-outline" color="success" slot="start"></ion-icon>
+            <ion-input slot="start" placeholder="Full Name:" ></ion-input>
+          </ion-item> -->
+          <ion-item style="margin-top: 5%;">
+            <ion-icon  slot="start" name="mail-outline" color="success" slot="start"></ion-icon>
+            <ion-input placeholder="Email:"  [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item style="margin-top: 5%;">
+            <ion-icon  slot="start" name="lock-closed-outline" color="success" slot="start"></ion-icon>
+            <ion-input slot="start" placeholder="Password:" [(ngModel)]="password" [type]="showPassword ? 'text': 'password'"></ion-input>
+            <ion-icon button slot="end" [name]="passwordToggleIcon" color="medium" (click)="togglePassord()"></ion-icon>
+          </ion-item>
+        </ion-list>
+        <!-- <ion-button (click)="goToLaSlide()">prev</ion-button> -->
+        <ion-button (click)="goToNextSlide()" (click)="signUP()" style="width: 100%;" color="success" [disabled]="!email || !password">Create</ion-button>
+      </diV>
+      <ion-label style="font-size: 14px; display: grid;margin-top: 3%;">Already have an Account? <ion-label color="success" (click)="goToLaSlide()">Login</ion-label></ion-label>
+    </ion-slide>
+
+    <!-- login slide -->
+    <ion-slide style="display: grid;">
+      <h4>Login Account</h4>
+      <diV style="display: inline-block;text-align: left;padding-left: 5%;padding-right: 5%;">
+        <ion-list style="margin-top: 5%;">
+          <ion-item style="margin-top: 5%;">
+            <ion-icon  slot="start" name="mail-outline" color="success" slot="start"></ion-icon>
+            <ion-input placeholder="Email:" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item style="margin-top: 5%;">
+            <ion-icon  slot="start" name="lock-closed-outline" color="success" slot="start"></ion-icon>
+            <ion-input slot="start" placeholder="Password:" [(ngModel)]="password" [type]="showPassword ? 'text': 'password'"></ion-input>
+            <ion-icon button slot="end" [name]="passwordToggleIcon" color="medium" (click)="togglePassord()"></ion-icon>
+          </ion-item>
+        </ion-list>
+        <!-- <ion-button (click)="goToLaSlide()">prev</ion-button> -->
+        <ion-button (click)="signIN()" style="width: 100%;" color="success" [disabled]="!email || !password">Login</ion-button>
+      </diV>
+      <ion-label style="font-size: 14px; display: grid;margin-top: 3%;">Don't have an Account? <ion-label color="success" (click)="goToNextSlide()">Create Account</ion-label></ion-label>
+      <!-- <ion-button (click)="goToPreSlide()">prev</ion-button> -->
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/admin" routerDirection = "back" slot="start" shape="round" style="--box-shadow:none; --background: none">
+        <ion-icon  name="arrow-back-outline" color="danger" style="margin-left: -10%;"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Add Poll</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea [(ngModel)]="topic" rows="1" style="height: 50%;" color="danger" placeholder="Topic:"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea  [(ngModel)]="question" rows="3" style="height: 50%;" color="danger" placeholder="Question:"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-label>Enter value for each options:</ion-label>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea  [(ngModel)]="option1" rows="2" style="height: 50%;" color="danger" placeholder="Option 1"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea  [(ngModel)]="option2" rows="2" style="height: 50%;" color="danger" placeholder="Option 2"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea  [(ngModel)]="option3" rows="2" style="height: 50%;" color="danger" placeholder="Option 3 #optional"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="margin-top: 2%; padding: 10px;">
+    <!-- <ion-label Stacked style="margin-top: 5%;"  color="danger">From:</ion-label> -->
+    <ion-item>
+      <ion-textarea  [(ngModel)]="option4" rows="2" style="height: 50%;" color="danger" placeholder="Option 4 #optional"></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div style="padding: 10px;">
+    <ion-button expand="full" color="danger" (click)="  addPoll()">add poll</ion-button>
+  </div>
+</ion-content>
+

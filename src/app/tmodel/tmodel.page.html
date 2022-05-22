@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Topics</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div style="padding: 10px;">
+    <ion-list *ngFor="let poll of Polls">
+        <ion-item   lines="none" style="border: 0.3px solid rgb(245, 153, 116); border-radius: 8px;">
+          <ion-label>
+            <ion-icon name="pin-outline" slot="start"  color="success"></ion-icon>
+            {{ poll.topic }}
+          </ion-label>
+          <ion-button (click)="deletePoll(poll)" shape="round">
+            Delete<ion-icon name="trash-outline" slot="end"  color="light" ></ion-icon>
+          </ion-button>
+        </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

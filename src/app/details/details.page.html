@@ -1,0 +1,35 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Let's set up your profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content >
+  <div style="text-align: center;">
+    <img src="assets/img/poll.png" height="50%" width="75%">
+  </div>
+  <!-- <h2>Let's set up your profile</h2> -->
+  <div style="padding: 15px; border-radius: 20px 0px 0px 0px;">
+    <ion-title style="text-align: center;font-weight: bolder;">Let's set up your profile</ion-title>
+    <ion-list>
+      <ion-item style="border: 1px solid rgb(247, 124, 108);border-radius: 15px;margin-top: 5%;">
+        <ion-input [(ngModel)]="profile.firstName" placeholder="First Name:" ></ion-input>
+      </ion-item>
+
+      <ion-item style="border: 1px solid rgb(247, 124, 108);border-radius: 15px;margin-top: 5%;">
+        <ion-input [(ngModel)]="profile.lastName" placeholder="Last Name:" ></ion-input>
+      </ion-item>
+
+      <ion-item style="border: 1px solid rgb(247, 124, 108);border-radius: 15px;margin-top: 5%;">
+        <ion-input [(ngModel)]="profile.matricNo" placeholder="Matric No:" ></ion-input>
+      </ion-item>
+
+      <ion-item style="border: 1px solid rgb(247, 124, 108);border-radius: 15px;margin-top: 5%;">
+        <ion-input [(ngModel)]="profile.department" placeholder="Department:" ></ion-input>
+      </ion-item>
+    </ion-list>
+  
+    <ion-button expand="full" color="success" shape="round" style="margin-top: 5%;" (click)="addProfile()">continue</ion-button>
+  </div>
+
+</ion-content>

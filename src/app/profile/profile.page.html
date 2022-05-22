@@ -1,0 +1,121 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-toolbar>
+      <ion-title>Profile</ion-title>
+      <ion-button routerLink="/folder/Inbox" routerDirection = "back" slot="start" shape="round" style="--box-shadow:none; --background: none">
+        <ion-icon  name="arrow-back"  style="margin-left: -10%;"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+   </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" >
+  <div style="background:#eb445a ; width: 100%; padding: 5%;">
+    <div class="container" style="background:#eb445a ;">
+      <div class="outer"
+      [ngStyle]="{'background-image': 'url(' + img + ')'}" >
+      <!-- id="trigger-button"*ngFor="let profilePix of profileP" -->
+      <div >
+        <div class="inner"  (click)="pixModel()">
+           <ion-icon name="camera" class="camera-icon" color="danger"></ion-icon>
+        </div>
+      </div>
+     </div>
+  </div>
+  <ion-label style="text-align:center" color="light">Edit profile pix</ion-label>
+</div>
+  <ion-list>
+    <ion-item>
+      <ion-label slot="start" style="font-weight: bold;">Fisrt Name:</ion-label>
+      <ion-label slot="end">{{firstN}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start" style="font-weight: bold;">Last Name:</ion-label>
+      <ion-label slot="end">{{lastN}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start"  style="font-weight: bold;" >Matric No:</ion-label>
+      <ion-label slot="end" >{{matricNo}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start"  style="font-weight: bold;">Department:</ion-label>
+      <ion-label slot="end">{{department}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start"  style="font-weight: bold;" >Email address:</ion-label>
+      <ion-label slot="end" >{{email}}</ion-label>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label slot="start"  style="font-weight: bold;">Nickname:</ion-label>
+    </ion-item> -->
+  </ion-list>
+  <!-- <ion-button shape="round" color="light" (click)="updateProfile()" expand="full" style="margin-top: 5%;">Update profile</ion-button> -->
+  <ion-button shape="round" color="danger" (click)="signOUT()" expand="full" style="margin-top: 35%;">Log Out</ion-button>
+  <!-- <ion-modal
+  [isOpen]="false"
+  [breakpoints]="[0.1, 0.5, 1]"
+  [initialBreakpoint]="0.25"
+  trigger="trigger-button"
+  >
+  <ng-template>
+    <ion-content>
+    <ion-title>
+      <h3 style="font-weight: bold;">Profile Photo</h3>
+    </ion-title>
+    <ion-grid class="ion-padding-top">
+      <ion-row>
+        <ion-col size="3" class="ion-text-center">
+          <div class="removePhoto">
+            <ion-icon name="trash" class="icon" size="large"></ion-icon>
+          </div>
+          <p>
+            Remove <br> photo
+          </p>
+        </ion-col>
+        <ion-col size="3" class="ion-text-center"
+  (click)="takePicture('Photos')">
+         <div class="galleryPhoto">
+            <ion-icon name="images" class="icon" size="large" ></ion-icon>
+         </div>
+         <p>
+           Gallery
+         </p>
+       </ion-col>
+       <ion-col size="3" class="ion-text-center"   (click)="takePicture('Camera')">
+         <div class="cameraPhoto">
+           <ion-icon name="camera" class="icon" size="large" ></ion-icon>
+         </div>
+         <p>
+           Camera
+         </p>
+       </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-content>
+  </ng-template>
+</ion-modal> -->
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <ion-tabs >
+      <ion-tab-bar>
+        <ion-tab-button  routerLink="/folder/Inbox" routerDirection = "back" >
+          <ion-icon name="home-outline" style="color:rgb(151, 150, 150)"></ion-icon>
+          <!-- <ion-label class="label1"><strong>Neck</strong></ion-label> -->
+        </ion-tab-button>
+
+        <!-- <ion-tab-button tab="schedule" routerLink="/history" routerDirection = "forward">
+            <ion-icon name="time-outline" style="color:rgb(151, 150, 150)"></ion-icon>
+
+        </ion-tab-button> -->
+
+        <ion-tab-button routerLink="/profile" routerDirection = "forward">
+          <ion-icon name="person-outline"   color="danger"></ion-icon>
+          <!-- <ion-label style="color:rgb(248, 194, 194)">Body</ion-label> -->
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+    </ion-toolbar>
+</ion-footer>
