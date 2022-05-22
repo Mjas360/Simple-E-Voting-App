@@ -10,7 +10,7 @@ Voters can vote for any poll of their choice.
 
 Admin can add or delete a poll.
 
-**Some of the screenshots of the App:**
+# Some of the screenshots of the App:
 
 ![Screenshot_20220522_134842](https://user-images.githubusercontent.com/95770269/169696040-48d2bfcb-c422-41eb-9206-9795a2fad298.jpg)
 ![Screenshot_20220522_134836](https://user-images.githubusercontent.com/95770269/169696044-ee1122b0-e1fc-4b9c-a476-2fc9899eba3a.jpg)
