@@ -2,7 +2,8 @@
 A simple opinion poll app design and developed using ionic framework.
 
 **About the app**
-The opinion poll app has to main users:
+
+The opinion poll app has two main users:
 1. Voters
 2. Admins
 
