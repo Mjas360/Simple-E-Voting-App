@@ -1,3 +1,19 @@
 # Simple-E-Voting-App
-A simple opinion poll app with a simple UI.
-An opinion poll also referred to as a poll is a research methodology carried out by an individual or group of individuals in order to gather the opinions of a sample of respondents from a population. Opinion polls are constructed to show the responses or opinions of a population (respondents) through the use of a questionnaire then deduce their responses in ratio or within confidence intervals. Polls is a mobile based polling application that enables an instructor to conduct polling in class and instantly assess student comprehension with live, in-class polling. You can create opinion polls with no set answer or create a poll question that requires a correct response. You can also stop the poll at any time and show and hide poll results with students. Students can also view and take polls available to them. Poll share organized as current or closed; current polls are sorted as to whether or not they have been answered, if an instructor allows, students can also view results for a closed poll.
+A simple opinion poll app design and developed using ionic framework.
+
+**About the app**
+The opinion poll app has to main users:
+1. Voters
+2. Admins
+
+Voters can vote for any poll of their choice.
+
+Admin can add or delete a poll.
+
+**Some of the screenshots of the App:**
+
+![Screenshot_20220522_134842](https://user-images.githubusercontent.com/95770269/169696040-48d2bfcb-c422-41eb-9206-9795a2fad298.jpg)
+![Screenshot_20220522_134836](https://user-images.githubusercontent.com/95770269/169696044-ee1122b0-e1fc-4b9c-a476-2fc9899eba3a.jpg)
+![Screenshot_20220522_134848](https://user-images.githubusercontent.com/95770269/169696052-5d0c4379-c504-42ea-8e12-6c0015612b57.jpg)
+![Screenshot_20220522_134903](https://user-images.githubusercontent.com/95770269/169696060-7f3d8699-db5e-4402-998d-d3499b39fbfb.jpg)
+![Screenshot_20220522_134908](https://user-images.githubusercontent.com/95770269/169696067-c1f01c71-42cf-4566-b9ed-1d2d479eff30.jpg)
